@@ -9,27 +9,14 @@ public class Player : MonoBehaviour
     public float power;
     public float rotationPower;
 
-    public int enemyLayer = 10;
-    public float spawnColumnDelay = 3;
-    public GameObject columnPrefab;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        StartCoroutine(SpawnObstaclesCoroutine());
     }
 
-    IEnumerator SpawnObstaclesCoroutine()
+    public void Init()
     {
-        while(true)
-        {
-            GameObject col = Instantiate(columnPrefab);
-            col.transform.position = new Vector3( 8, Random.Range(-2, 2), 0);
-            col.transform.rotation = Quaternion.identity;
-
-            yield return new WaitForSeconds(spawnColumnDelay);
-        }
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Update()
@@ -40,11 +27,12 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * power,ForceMode2D.Impulse);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == enemyLayer)
-            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+        if(collision.gameObject.CompareTag("Column"))
+        {
+            //GAME OVER
+        }
     }
 
 }
