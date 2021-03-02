@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columnPrefab: {fileID: 1686587902471572138, guid: f8e3c56271059a343918479b5e1ff585,
     type: 3}
-  player: {fileID: 1444360392022647096, guid: 9f5b55eaee26abd44a89d6c183f37268, type: 3}
+  player: {fileID: 4440578906514809823, guid: 879af40dbe5b6c145a84b2eb16b83c47, type: 3}
   waitTime: 3
 --- !u!4 &2066162630
 Transform:
