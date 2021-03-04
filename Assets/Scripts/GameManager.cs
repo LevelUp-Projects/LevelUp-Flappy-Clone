@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public Player player;
     public float waitTime;
     public WaitForSeconds wait;
+
+    //SEM SCORE
     private void Awake()
     {
         wait = new WaitForSeconds(waitTime);
@@ -29,10 +31,9 @@ public class GameManager : MonoBehaviour
             yield return wait;
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void AddScore()
     {
-        
+        //PRIDAJ SCORE
+        //UPDATNI UI
     }
 }
