@@ -1421,6 +1421,10 @@ MonoBehaviour:
     type: 3}
   player: {fileID: 4440578906514809823, guid: 879af40dbe5b6c145a84b2eb16b83c47, type: 3}
   waitTime: 3
+  coinData:
+  - {fileID: 11400000, guid: 55d64955326303d41a5f9e7c93310c73, type: 2}
+  - {fileID: 11400000, guid: 06e75d771f56ed546a24890eb3cbfe56, type: 2}
+  - {fileID: 11400000, guid: e3ca5cf65dc14f040be0019f2d575a13, type: 2}
 --- !u!4 &2066162630
 Transform:
   m_ObjectHideFlags: 0
